@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Beverage"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name" />
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/radioGroupBeverage"
+        android:layout_below="@id/editTextName"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radioCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee" />
+        <RadioButton android:id="@+id/radioTea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tea" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkboxMilk"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/radioGroupBeverage"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:text="Milk" />
+
+    <CheckBox
+        android:id="@+id/checkboxSugar"
+        android:layout_toRightOf="@id/checkboxMilk"
+        android:layout_below="@id/radioGroupBeverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Sugar" />
+
+    <TextView
+        android:id="@+id/textViewSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/checkboxMilk"
+        android:text="Size"/>
+
+    <Spinner
+        android:id="@+id/spinnerSize"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/checkboxMilk"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@id/textViewSize"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupFlavors"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/textViewSize"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radioNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None" />
+        <RadioButton android:id="@+id/radioVanilla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vanilla" />
+        <RadioButton android:id="@+id/radioChocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate" />
+        <RadioButton android:id="@+id/radioLemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lemon" />
+        <RadioButton android:id="@+id/radioMint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mint" />
+    </RadioGroup>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoTextViewProvinces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupFlavors"
+        android:completionThreshold="2"
+        android:layout_marginTop="25dp"
+        android:popupBackground = "#ccc"
+        android:dropDownHeight="wrap_content"
+        android:hint="Provinces" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/autoTextViewProvinces"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="Calculate"/>
+
+</RelativeLayout>

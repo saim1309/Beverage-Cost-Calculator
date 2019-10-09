@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Beverage Cost Calculator</string>
+
+    <string-array name="size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    
+    <string-array name="provinces">
+        <item>Alberta</item>
+        <item>Manitoba</item>
+        <item>Newfoundland and Labrador</item>
+        <item>Ontario</item>
+        <item>Prince Edward Island</item>
+        <item>Saskatchewan</item>
+        <item>Quebec</item>
+        <item>Nova Scotia</item>
+        <item>New Brunswick</item>
+    </string-array>
+
+
+</resources>
